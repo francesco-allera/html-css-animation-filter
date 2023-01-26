@@ -1,0 +1,95 @@
+/* -- TRANSITIONS DURATION -- */
+.ex-1-square, .ex-2-square, .ex-7-img, .ex-8-img, .ex-9-img {
+   transition: 2s;
+}
+.ex-3-square, .ex-4-square, .ex-5-square {
+   transition: 1s;
+}
+
+/* -- EFFECTS AND ANIMATIONS -- */
+.ex-1-square:hover {
+   background: red;
+}
+.ex-2-square:active {
+   width: 100%;
+}
+.ex-3-square:hover {
+   border-radius: 100%;
+}
+.ex-4-square:hover {
+   opacity: 0;
+}
+.ex-5-square:hover {
+   transform: scale(2);
+}
+.ex-5-square:active {
+   transform: scale(.5);
+}
+.ex-6-img:hover {
+   filter: grayscale(1);
+}
+.ex-7-img:hover {
+   filter: sepia(.5) grayscale(.6);
+}
+.ex-8-img:hover {
+   filter: sepia(.5) grayscale(.6);
+   border-radius: 20px;
+}
+.ex-9-img:hover {
+   filter: sepia(.5) grayscale(.6);
+   border-radius: 20px;
+   transform: scale(1.5);
+}
+.ex-10-icon {
+   animation: rotation 1s linear infinite reverse;
+}
+@keyframes rotation {
+   0%   { transform: rotate(0deg);   }
+   100% { transform: rotate(360deg); }
+}
+.ex-11-icon:hover {
+   animation: rotation-2 2s linear;
+}
+@keyframes rotation-2 {
+   0%   { transform: rotate(0deg);   }
+   75%  { transform: rotate(270deg); }
+   100% { transform: rotate(0deg);   }
+}
+.ex-12-button:hover .ex-12-top-white{
+   animation: movement-top 2s linear;
+}
+@keyframes movement-top {
+   0%   { left: 10%;               }
+   50%  { left: calc(100% - 60px); }
+   100% { left: 10%;               }
+}
+.ex-12-button:hover .ex-12-bottom-white{
+   animation: movement-bottom 2s linear;
+}
+@keyframes movement-bottom {
+   0%   { right: 20%                }
+   50%  { right: calc(100% - 60px); }
+   100% { right: 20%;               }
+}
+.ex-13-button:hover .ex-13-top-white {
+   animation: movement-complete-top 2s linear;
+}
+@keyframes movement-complete-top {
+   0%   { left: 10%;   top: -10px; }
+   20%  { left: 100%;  top: -10px; }
+   40%  { left: 100%;  top: 100%;  }
+   60%  { left: -10px; top: 100%;  }
+   80%  { left: -10px; top: -10px; }
+   100% { left: 10%;   top: -10px; }
+}
+.ex-13-button:hover .ex-13-bottom-white {
+   animation: movement-complete-bottom 2s linear;
+}
+@keyframes movement-complete-bottom {
+   0%   { right: 20%;               bottom: -10%;  }
+   20%  { right: calc(100% - 50px); bottom: -10px; }
+   40%  { right: calc(100% - 50px); bottom: 100%;  }
+   60%  { right: -10px;             bottom: 100%;  }
+   80%  { right: -10px;             bottom: -10px; }
+   100% { right: 20%;               bottom: -10%;  }
+}
